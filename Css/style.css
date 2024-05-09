@@ -22,6 +22,7 @@ body {
 #home p{
     text-align:  justify;
 }
+
 .featured-products p{
     text-align: center;
 }
@@ -39,12 +40,13 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 200px;
+   
 }
 
 .fotorama {
     width: 50%;
     margin: 20px auto;
+    
 }
 
 #home p {
@@ -56,13 +58,10 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center; /* Center the cards */
+    justify-content: center; 
 }
 
-.card {
-    margin: 15px;
-    max-width: 18rem; /* Set maximum width for cards */
-}
+
 
 .card-img-top {
     width: 100%;
@@ -143,7 +142,7 @@ footer a:link {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 20px;
-    padding-bottom: 200px;
+    padding-bottom: 20px;
 }
 
 form {
@@ -163,6 +162,44 @@ form {
 .btn-primary:hover {
     background-color: #333;
     border-color: #333;
+}
+
+.featured-products{
+    border-top: #333 5px double;
+    padding: 20px;
+}
+.reviews{
+    border-top: #333 5px double;
+    padding: 20px; 
+}
+.card{
+   justify-content: center;
+}
+
+.reviews {
+    padding: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.card {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 18rem;
+}
+
+.card-body {
+    font-size: 16px;
+}
+
+.card-body h5 {
+    margin-bottom: 10px;
 }
 
 @media (min-width: 769px) {
