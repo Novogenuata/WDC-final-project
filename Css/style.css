@@ -3,72 +3,78 @@
     margin: 0;
     box-sizing: border-box;
 }
-a:link { text-decoration: none; }
-a:visited { text-decoration: none; }
-a:hover { text-decoration: none; }
-a:active { text-decoration: none; }
 
-h1 a:link{
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+}
+
+h1 a:link, h1 a:visited, h1 a:hover, h1 a:active {
     color: #333;
 }
-h1 a:visited{
-    color: #333;
-}
-h1 a:hover{
-    color: #333;
-}
-h1 a:active{
-    color: #333;
-}
+
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; 
-    margin: 0; 
-    padding: 0; 
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+#home p{
+    text-align:  justify;
+}
+.featured-products p{
+    text-align: center;
 }
 
 #wrapper {
-    flex: 1; 
+    flex: 1;
+    
 }
+
+.product_list{
+    margin: auto;
+}
+
 .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-bottom: 200px;
 }
+
 .fotorama {
     width: 50%;
+    margin: 20px auto;
 }
+
 #home p {
     width: 80%;
     margin-right: 20px;
 }
 
-
 .flex-container {
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
     flex-wrap: wrap;
-  }
-  
-  .card {
-   margin: 15px;
-  }
+    justify-content: center; /* Center the cards */
+}
 
+.card {
+    margin: 15px;
+    max-width: 18rem; /* Set maximum width for cards */
+}
 
 .card-img-top {
     width: 100%;
     height: 300px;
-    object-fit: cover; 
+    object-fit: cover;
 }
-
 
 nav {
     background-color: #333;
     color: #fff;
     padding: 20px;
-    text-align: center; 
+    text-align: center;
 }
 
 nav ul {
@@ -78,52 +84,41 @@ nav ul {
 }
 
 nav ul li {
-    display: inline-block; 
-    margin-right: 20px; 
+    display: inline-block;
+    margin-right: 20px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 18px; 
-    transition: color 0.3s ease; 
+    font-size: 18px;
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
     color: #ffd700;
 }
 
-
-
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Jaro';
 }
 
-
-
-
-
 h1 {
-   text-align: center;
-   color: #333;
-   
-  }
+    text-align: center;
+    color: #333;
+}
 
-  div h2 {
+div h2 {
     padding-left: 10px;
     margin-top: 20px;
-  }
+    text-align: center;
+}
 
-  footer{
+footer {
     text-align: center;
     background-color: #333;
     color: #fff;
     padding: 20px;
-  }
-
-  .fotorama {
-    width: 100%;
-    margin: 20px auto; 
 }
 
 .contact-form {
@@ -136,12 +131,11 @@ h1 {
     margin-bottom: 20px;
 }
 
-p{
+p {
     margin-left: 10px;
 }
 
-
-footer a:link{
+footer a:link {
     color: #f8f9fa;
 }
 
@@ -152,12 +146,10 @@ footer a:link{
     padding-bottom: 200px;
 }
 
-
 form {
     max-width: 500px;
     margin: 0 auto;
 }
-
 
 #map {
     margin-top: 50px;
@@ -173,9 +165,42 @@ form {
     border-color: #333;
 }
 
-  
+@media (min-width: 769px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
 
-@media (max-width: 768px) {
+    .card {
+        margin: 15px;
+        max-width: 300px;
+    }
+
+    .fotorama {
+        width: 70%;
+        margin: 20px auto;
+    }
+
+    #home p {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .card {
+        max-width: 100%;
+    }
+
+    .fotorama {
+      display: none;
+
     nav {
         width: 100%;
         position: fixed;
@@ -184,20 +209,16 @@ form {
         z-index: 1000;
     }
 
-    main {
-        margin-left: 0;
-    }
-    .container {
-        flex-direction: column;
-    }
+ 
+
     #home p {
         width: 100%;
         margin-right: 0;
         margin-bottom: 20px;
+        text-align: center;
     }
-    .fotorama {
-        width: 100%;
+    .card {
+        max-width: calc(100% - 30px); 
     }
 }
-
-  
+}
